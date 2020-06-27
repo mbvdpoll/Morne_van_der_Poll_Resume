@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<!-- ----------------------------- STYLE SHEET ------------------------------->
+	<style>
+		.header01{
+  			height: 231px;
+  			background-color: rgb(150,200,255);
+		}
+		.footer01{
+			line-height: 2px;
+			height: 30px;
+  			margin-top: 0px;
+  			position: fixed;
+  			bottom: 0;
+  			width: 100%;
+  			background-color: rgb(150,200,255);
+  			float: left;
+  			text-align: -20px;
+			}		
+		.headshot {
+			float: left;
+			width:200px;
+			margin: 10px;
+/*			margin-left: 20px;*/
+			border-radius: 50%
+			}
+		.headerName {
+			color: rgb(0,0,255);
+			font-family: Arial, Helvetica;
+			font-size: 32pt;
+			margin-top: 90px;
+  			margin-bottom: 50px;
+  			margin-right: 20px;
+  			margin-left: 30px;
+			position: absolute;
+			}
+		.headerDesignation {
+			color: rgb(0,0,255);
+			font-family: Arial, Helvetica;
+			font-size: 16pt;
+			margin-top: 140px;
+  			margin-bottom: 50px;
+  			margin-right: 20px;
+  			margin-left: 30px;
+  			position: absolute;
+			}
+		.paraHeader{
+			line-height: 0px;
+			color: rgb(0,0,255);
+			font-family: Arial, Helvetica;
+			font-size: 20pt;
+			font-weight: bold;
+			background: rgb(55,55,55);
+			}
+		.tab {
+  			overflow: hidden;
+  			border: 1px solid rgb(150,200,255);
+  			background-color: #f1f1f1;
+			}
+		.tab button {
+  			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.5s;
+			font-size: 17px;
+			}
+		.tab button:hover {
+  			background-color: rgb(150,200,255);
+			}
+		.tab button.active {
+ 			background-color: rgb(0,0,255);
+ 			color: rgb(255,255,255);
+			}
+		.tabcontent {
+  			display: none;
+  			padding: 6px 12px;
+/*  			border: 1px solid #ccc;*/
+  			border-top: none;
+  			opacity: 1;
+			animation-name: fadeInOpacity;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-in;
+			animation-duration: 0.5s;
+			}
+
+		@keyframes fadeInOpacity {
+			0% { opacity: 0;}
+			100% { opacity: 1;}
+			}
+
+		table {
+			padding: 2px;
+  			text-align: left;
+  			width: 50%;
+  			font-family: Arial, Helvetica;
+			}
+		body {
+			background: rgb(200,220,255);
+			margin-bottom: 30px;
+			}
+		p, ul, li {
+			font-family: Arial, Helvetica;
+		}
+	</style>
+
+<!-- ----------------------------- SCRIPT FUNCTION ------------------------------->
+	<script>
+		function openTab(event, tabName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			event.currentTarget.className += " active";
+		}
+	</script>
+
+<!-- ----------------------------- PAGE TITLE ------------------------------->
+	<title>Morne van der Poll CV</title>
+
+<!-- ----------------------------- HEADER ------------------------------->
+	<div class="header01">
+			<img class= "headshot" id = "backtop" src="images/morne.jpg" alt="Headshot"> 
+			<span class="headerName"> Morné van der Poll</span>
+			<span class="headerDesignation"> Sales Manager</span>
+	</div>
+
+<!-- ----------------------------- MENU TABS ------------------------------->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'About me')">About me</button>
+		<button class="tablinks" onclick="openTab(event, 'Professional Experience')">Professional Experience</button>
+		<button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+		<button class="tablinks" onclick="openTab(event, 'Github Projects')">Github Projects</button>
+		<button class="tablinks" onclick="openTab(event, 'Contacts')">Contacts</button>
+	</div>
+	<body>
+
+<!-- ----------------------------- ABOUT ME TAB ------------------------------->
+	<div id="About me" class="tabcontent">
+  			<p class="paraHeader">About me</p>
+			<p style="font-size: 16px">I am a highly skilled professional in Information Technology Distribution with over 10 years of sales and management experience. My experience includes managing a distribution sales team, procurement, product management, and marketing. I also use data manipulation to increase productivity within the company, prepare and upload in-depth product content to price lists and assist in warehouse management to ensure inventory accuracy. 
+			I am an aspiring Software Engineer with skills in Python and Java languages. </p><br>
+
+		<p class="paraHeader">Skillset </p>
+		<table>
+			<tr>
+				<td><b>Personal Skills:</b></td>
+				<td></td>
+				<td><b>Software Skills:</b></td>
+			</tr>
+			<tr>
+				<td>Creativity</td>
+				<td></td>
+				<td>Adobe Photoshop</td>
+			</tr>
+			<tr>
+				<td>Customer Service</td>
+				<td></td>
+				<td>Microsoft Office </td>
+			</tr>
+			<tr>
+				<td>Decision Making</td>
+				<td></td>
+				<td>Microsoft Windows</td>
+			</tr>
+			<tr>
+				<td>Leadership</td>
+				<td></td>
+				<td>Visual Basic for Applications</td>
+			</tr>
+			<tr>
+				<td>Problem-solving</td>
+				<td></td>
+				<td>Python</td>
+			</tr>
+			<tr>
+				<td>Product Knowledge</td>
+				<td></td>
+				<td>Java</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>MySQL</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>HTML</td>
+			</tr>
+		</table><br>
+	</div>
+
+<!-- ----------------------------- PROFESSIONAL EXPERIENCE TAB ------------------------------->
+	<div id="Professional Experience" class="tabcontent">
+		<p class="paraHeader">Professional Experience</p>
+			<p><b>Sales Manager - Frontosa Technologies - (September 2012 - Present)</b><br></p>
+		<p>Duties / Responsibilities:</p>
+		<ul>
+			<li>Implementation of new business ideas to increase efficiency and productivity within the company. </li>
+			<li>Managing the business IT infrastructure to ensure continuous up time. </li>
+			<li>Manage, develop and motivate sales team to ensure a high standard is achieved and monthly targets and KPI’s are met. Recruiting new team members, train new and existing team members to maintain a high technical knowledge of products and services. Expand customer base by implementing strategic business plans and forecasting trends. Boost staff morale by planning team building events and working with marketing on sales driven incentives.  </li>
+			<li>Designing product mailers on all new products to be sent to client database on daily basis to raise awareness of new and upcoming products. Ensuring all advertising is up to company and vendor standards </li>
+		</ul>
+			<p>Accomplishments:</p>
+		<ul>
+			<li>Introduced multiple cost and efficiency solutions, including redesigning entire collection and delivery system which cut paper cost by over 75%, automated invoices, error removal from collections, contact less collections. Zero downtime stock take.  </li>
+			<li>Increased company turnover by an average of 12.76% per year since 2012 </li>
+			<li>Created a stable and reliable sales team with lowest sales staff turnover since 2015</li>
+		</ul>
+		<br>
+
+		<p><b>Sales Consultant - Frontosa Technologies - (May 2010  - September 2012)</b><br></p>
+		<p>Duties / Responsibilities:</p>
+		<ul>
+			<li>Telesales, client facing sales, follow up on inactive clients, building relationships with clients for recurring business. </li>
+			<li>Maintaining a relationship with current client base by providing support and after sales services. Assisting less experienced team members with procedural and technical questions. Maintaining a high level of technical and professional knowledge by attending training sessions. </li>
+		</ul>
+
+		<p>Accomplishments:</p>
+		<ul>
+			<li>Implemented numerous systems to increase efficiency and productivity within the company.</li>
+			<li>Achieved the highest monthly sales figure within the company within first 3 months. </li>
+		</ul>
+		<br>
+
+		<p><b>Sales Manager / Sales - ItWorx SA - (May 2010  - September 2012)</b><br></p>
+		<p>Duties / Responsibilities:</p>
+		<ul>
+			<li>Assisting walk in clients with general queries and sales, managing product mark-ups and specials, ordering and receiving new products for the store, keeping a clean and organised shop front with stock rotation to pull in new clients </li>
+		</ul>
+		<br>
+	</div>
+
+<!-- ----------------------------- EDUCATION TAB ------------------------------->
+	<div id="Education" class="tabcontent">
+		<p class="paraHeader">Education</p>
+		<p><b>HTS Pretoria Tuine (2003-2007)</b><br>
+		Matriculated 2007</p>
+		<p><b>HyperionDev (2020-2020)</b><br>
+		Software Engineering Bootcamp (6 months)</p><br>
+	</div>
+
+<!-- ----------------------------- PROJECTS TAB ------------------------------->
+	<div id="Github Projects" class="tabcontent">
+		<p class="paraHeader">Github Projects</p>
+		<p><a href="https://github.com/mbvdpoll/L1Capstone1" target="_blank" style="text-decoration: none;"> <b>Finance Calculator</b></a></p>
+		<p><a href="https://github.com/mbvdpoll/L1Capstone2" target="_blank" style="text-decoration: none;"> <b>Car Game</b></a></p>				
+		<p><a href="https://github.com/mbvdpoll/L1Capstone3" target="_blank" style="text-decoration: none;"> <b>TaskManager</b></a></p>
+		<p><a href="https://github.com/mbvdpoll/L2Capstone1" target="_blank" style="text-decoration: none;"> <b>PoisedPMS</b></a></p>
+		<br>
+	</div>
+
+	<!-- ----------------------------- CONTACT TAB ------------------------------->
+	<div id="Contacts" class="tabcontent">
+		<p class="paraHeader">Contacts</p>
+		<p><a> <img src="images/icon02.png" width="15"><b> Email: </b> <a href="mailto:mbvdpoll@gmail.com">mbvdpoll@gmail.com</a></p>
+		<p><a> <img src="images/icon01.png" width="15"><b> Phone: </b> (+27) 072 477 3418</p>
+		<p><a> <img src="images/icon03.png" width="15"><b> LinkedIn: </b> <a href="https://www.linkedin.com/in/morne-van-der-poll/" target="_blank">morne-van-der-poll</a></p>
+		<p><a> <img src="images/icon04.png" width="15"><b> GitHub: </b> <a href="https://github.com/mbvdpoll" target="_blank">mbvdpoll</a></p>
+		<br>
+	</div>
+	</body>
+
+	<div class="footer01">
+		<p style="padding-left: 20px; float: left;" >Morné van der Poll - Sales Manager</p>
+		<a href="https://github.com/mbvdpoll" target="_blank"><img src="images/icon04.png" width="15" style="text-align: right; float: right; padding-right: 20px; padding-top: 6px"></a>
+		<a href="https://www.linkedin.com/in/morne-van-der-poll/" target="_blank"><img src="images/icon03.png" width="15" style="text-align: right; float: right; padding-right: 20px; padding-top: 6px"></a>
+		<a href="mailto:mbvdpoll@gmail.com" target="_blank"><img src="images/icon02.png" width="15" style="text-align: right; float: right; padding-right: 20px; padding-top: 6px"></a>
+	</div>
+
+</html>
